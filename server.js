@@ -2,9 +2,10 @@
 
 
 const express=require('express');
+require('dotenv').config();
 const dataRead=require('./assets/data.json')
  const server=express();
- const PORT=3001
+ const PORT=process.env.PORT
  server.get('/',(req,res)=>{
      res.send('home route')
  })
